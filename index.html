@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WEB DASAR - HADYAN AHMAD</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal-styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <a href="#"
+          ><img
+            class="image-shadow"
+            src="img/letter-h.png"
+            alt=""
+            srcset=""
+            height="50"
+            width="50"
+        /></a>
+      </div>
+      <div class="sidebar center">
+        <img
+          class="image-cropper image-shadow responsive"
+          src="img/hadyan.jpg"
+          alt=""
+          srcset=""
+          height="250"
+          width="250"
+        />
+        <h4>Hadyan Ahmad</h4>
+        <h4>Web Developer</h4>
+      </div>
+      <button class="konten" id="myStory">
+        <i class="fas fa-book"></i> My Story
+      </button>
+      <button class="konten" id="myQuote">
+        <i class="fas fa-quote-right"></i> My Favorite Quote
+      </button>
+      <button class="konten" id="calculatorPage">
+        <i class="fas fa-calculator"></i> Simple Calculator
+      </button>
+      <div class="footer center">
+        <a href="https://github.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-github"></i> Github</a
+        >
+        <a
+          href="https://linkedin.com/in/hadyandev"
+          target="_blank"
+          class="a-btn"
+          ><i class="fab fa-linkedin"></i> Linkedin</a
+        >
+        <a href="https://instagram.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-instagram"></i> Instagram</a
+        >
+        <a href="https://twitter.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-github"></i> Twitter</a
+        >
+      </div>
+
+      <!-- The Modal -->
+      <div id="storyModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="spanStory">&times;</span>
+          <h1><i class="fas fa-book"></i> My Story</h1>
+          <hr />
+          <p>Hello, I'm Hadyan.</p>
+          <p>
+            I'm a Fullstack Web Developer. I describe myself as a passionate
+            learner. That's why I really like to learn, taking some courses,
+            watching tutorials, attending tech event, joining bootcamp &
+            seminar, and much more. Well, I may graduated from IT major, but I
+            find enjoying my life as a developer these 2 years. From these years
+            I learned many thing. Develop using Laravel is enjoyable for Laravel
+            is a really great framework. In my spare time, I learned modern
+            javascript too like React and Vue.
+          </p>
+        </div>
+      </div>
+
+      <div id="quoteModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="spanQuote">&times;</span>
+          <h1><i class="fas fa-quote-right"></i> My Favorite Quote</h1>
+          <hr />
+          <p>
+            Someone asked: "What is the secret of your piety?" <br />Hassan Al
+            Basri replied "I have understood 4 things:👇🏼<br />
+            1. My rizq can't be taken by anyone, so my heart is contended.
+            <br />2. No one can do my good deeds, so I started doing them
+            myself.<br />
+            3. Allah Ta'ala is watching me, so I felt shame in doing wrong.<br />
+            4. Death is waiting for me, so I started to prepare for my meeting
+            with Allah Ta'ala. "
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/fontawesome-all.min.js"></script>
+    <script>
+      var modalStory = document.getElementById("storyModal");
+      var btnStory = document.getElementById("myStory");
+
+      var modalQuote = document.getElementById("quoteModal");
+      var btnQuote = document.getElementById("myQuote");
+
+      var spanStory = document.getElementById("spanStory");
+      var spanQuote = document.getElementById("spanQuote");
+
+      // When the user clicks on the button, open the modal
+      btnStory.onclick = function() {
+        modalStory.style.display = "block";
+      };
+
+      btnQuote.onclick = function() {
+        modalQuote.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      spanStory.onclick = function() {
+        modalStory.style.display = "none";
+      };
+
+      spanQuote.onclick = function() {
+        modalQuote.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modalStory) {
+          modalStory.style.display = "none";
+        }
+      };
+
+      window.onclick = function(event) {
+        if (event.target == modalQuote) {
+          modalQuote.style.display = "none";
+        }
+      };
+
+      var calculatorPage = document.getElementById("calculatorPage");
+      calculatorPage.onclick = function() {
+        window.location.replace("./calculator");
+      };
+    </script>
+  </body>
+</html>

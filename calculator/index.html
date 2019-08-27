@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MWS - HADYAN AHMAD</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/calcstyless.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="css/calc-styles.css" />
+  </head>
+  <body>
+    <div class="calc-wrapper">
+      <div class="menu">
+        <a href=".."
+          ><img
+            class="image-shadow"
+            src="../img/letter-h.png"
+            alt=""
+            srcset=""
+            height="50"
+            width="50"
+        /></a>
+      </div>
+      <div class="footer center">
+        <h1><span class="typcn typcn-calculator"></span> Simple Calculator</h1>
+      </div>
+      <div class="calc-input1">
+        <input
+          type="number"
+          ng-model="input1"
+          placeholder="Input your number here"
+        />
+      </div>
+      <div class="calc-input2">
+        <input
+          type="number"
+          ng-model="input2"
+          placeholder="Input your number here"
+        />
+      </div>
+      <div class="footer center">
+        <button
+          class="btn-group"
+          ng-click="input1 = null; input2 = null;"
+          onmouseover="btnGroupHover(this)"
+          onmouseout="btnGroupNormal(this)"
+        >
+          Reset
+        </button>
+      </div>
+      <div class="calc-result">
+        <h2>Result: {{ input1 + input2 }}</h2>
+      </div>
+      <div class="footer center">
+        <a href="https://github.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-github"></i> Github</a
+        >
+        <a
+          href="https://linkedin.com/in/hadyandev"
+          target="_blank"
+          class="a-btn"
+          ><i class="fab fa-linkedin"></i> Linkedin</a
+        >
+        <a href="https://instagram.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-instagram"></i> Instagram</a
+        >
+        <a href="https://twitter.com/hadyandev" target="_blank" class="a-btn"
+          ><i class="fab fa-github"></i> Twitter</a
+        >
+      </div>
+    </div>
+    <script src="../js/fontawesome-all.min.js"></script>
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function($scope) {
+        input1 = "";
+        input2 = "";
+      });
+    </script>
+  </body>
+</html>
